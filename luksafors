@@ -1,0 +1,24 @@
+
+import winsound
+import time
+#Programmas attīstības iespējas - Ievade ar lielajiem burtiem, pielikt skaņu. 
+krasa=input("Ievadi luksafora krāsu: ")
+
+krasa=krasa.lower()
+
+if krasa.startswith("sarkan"):# vīriešu un sieviešu dzimte izslēdz
+    print("Nedrīkst iet!")
+    for i in range (10):
+        winsound.Beep(1000, 500)  # Frequency 1000 Hz, Duration 500 ms
+        time.sleep(0.3)
+        
+elif krasa.startswith("zaļ"):
+    print("Drīkst šķērsot ielu!")
+    for i in range (10):
+        winsound.Beep(2000, 500)  # Frequency 2000 Hz, Duration 500 ms
+        time.sleep(0.3)
+else:
+    print("Liksafora signāls netiek nolasīt") 
+    for i in range (10):
+        winsound.Beep(500, 500)  # Frequency 500 Hz, Duration 500 ms
+        time.sleep(0.3)
